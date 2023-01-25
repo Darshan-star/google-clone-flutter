@@ -1,6 +1,8 @@
+<!-- Created for the requirement of project -->
+
 <!DOCTYPE html>
-<html>
-<head>
+<html> 
+<head> 
   <!--
     If you are serving your web app in a path other than the root, change the
     href value below to reflect the base path you are serving from.
@@ -29,7 +31,7 @@
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
+  <link rel="icon" type="image/png" href="favicon.png"/> 
 
   <title>google_clone</title>
   <link rel="manifest" href="manifest.json">
@@ -46,7 +48,7 @@
         return;
       }
       scriptLoaded = true;
-      var scriptTag = document.createElement('script');
+      var scriptTag = document.createElement('script'); 
       scriptTag.src = 'main.dart.js';
       scriptTag.type = 'application/javascript';
       document.body.append(scriptTag);
@@ -61,7 +63,7 @@
         var serviceWorkerUrl = 'flutter_service_worker.js?v=' + serviceWorkerVersion;
         navigator.serviceWorker.register(serviceWorkerUrl)
           .then((reg) => {
-            function waitForActivation(serviceWorker) {
+            function waitForActivation(serviceWorker) { 
               serviceWorker.addEventListener('statechange', () => {
                 if (serviceWorker.state == 'activated') {
                   console.log('Installed new service worker.');
@@ -81,7 +83,7 @@
               waitForActivation(reg.installing);
             } else {
               // Existing service worker is still good.
-              console.log('Loading app from service worker.');
+              console.log('Loading app from service worker.'); 
               loadMainDartJs();
             }
           });
